@@ -1,0 +1,14 @@
+<% if obj_errors.errors.any? %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="alert alert-danger" role="alert">
+        <h2><%= "#{obj_errors.errors.count} error stopped this from working!"%></h2>
+        <% obj_errors.errors.full_messages.each do |message| %>
+        <ul>
+          <li><%= message %></li>
+        </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

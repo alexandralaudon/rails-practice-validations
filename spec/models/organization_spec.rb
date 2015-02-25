@@ -9,12 +9,12 @@ describe Organization do
   end
 
   it 'validates the presence of the name' do
-    expect(@organ1.errors[:name].present?).to eq(false)
-    expect(@organ2.errors[:name].present?).to eql(true)
+    expect(@organ1.errors[:name].present?).to eq(true)
+    expect(@organ2.errors[:name].present?).to eq(false)
   end
 
   it 'validates the uniqueness of the name' do
-    expect(@organ3).errors[:name].present?).to eql(false)
+    expect(@organ3.errors[:name].present?).to eq(true)
   end
 
 end
